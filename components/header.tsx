@@ -14,9 +14,9 @@ export default function HeaderComponent() {
           height="324"
           alt="Barnacle Rodeo Votes"
         />
-        <div class="subhead">
+        <div className="subhead">
           <h2>
-            <div class="subtitle">
+            <div className="subtitle">
               Barnacle Rodeo is a genesis Kujira validator
               <br /> and we&apos;re celebrating our governance votes and voting
               record!
