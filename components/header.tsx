@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function HeaderComponent() {
   return (
     <>
-      <div class="header">
+      <div className="header">
         <h1>Barnacle Rodeo Votes</h1>
         <h2>
           <span>An NFT Collection of Governance Votes by Barnacle Rodeo</span>
