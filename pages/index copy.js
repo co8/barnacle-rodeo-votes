@@ -1,19 +1,20 @@
 import Head from "next/head";
+import Image from "next/image";
 import { getBRVotesList } from "../libs/sheets";
+import JSONPretty from "react-json-pretty";
+import "react-json-pretty/themes/monikai.css";
 import { Gallery } from "react-grid-gallery";
-import HeaderComponent from "../components/header";
 
 export default function IndexPage({ votes_api }) {
   return (
     <>
       <Head>
-        <title>Barnacle Rodeo Votes : NFTs on Stargaze</title>
+        <title>Barnacle Rodeo Votes</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <HeaderComponent />
-      <div id="media">
-        <Gallery images={votes_api} />
-      </div>
+      {/* Votes in Sheets: <strong>{votes_api.length}</strong> */}
+      <Gallery images={votes_api} enableImageSelection="false" />
+      {/* <VotesJson props={votes_api} /> */}
     </>
   );
 }
@@ -29,21 +30,19 @@ export async function getStaticProps(context) {
   };
 }
 
-/* react-json-pretty */
-export function VotesJson(votes_api) {
-  //console.log(votes_api);
-  return (
-    <div>
-      <JSONPretty
-        id="json-pretty"
-        mainStyle="background:transparent"
-        data={votes_api}
-      ></JSONPretty>
-    </div>
-  );
-}
+// export function VotesJson(votes_api) {
+//   //console.log(votes_api);
+//   return (
+//     <div>
+//       <JSONPretty
+//         id="json-pretty"
+//         mainStyle="background:transparent"
+//         data={votes_api}
+//       ></JSONPretty>
+//     </div>
+//   );
+// }
 
-/* react-grid-gallery@1.0.0 */
 // export function Gallery(votes_api) {
 //   //console.log(votes_api);
 //   return (
