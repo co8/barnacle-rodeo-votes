@@ -18,7 +18,7 @@ export default function HeaderComponent() {
           <h2>
             <div class="subtitle">
               Barnacle Rodeo is a genesis Kujira validator
-              <br /> and we're celebrating our governance votes and voting
+              <br /> and we&apos;re celebrating our governance votes and voting
               record!
               <br />
               Bonus Artwork Celebrating our Milestones have Replaced Failed
