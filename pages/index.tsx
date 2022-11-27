@@ -19,7 +19,7 @@ export default function IndexPage({ votes_api }) {
 }
 
 export async function getStaticProps(context) {
-  const votes_api = await getBRVotesList();
+  const votes_api: object = await getBRVotesList();
   //console.log(votes_api);
   return {
     props: {
