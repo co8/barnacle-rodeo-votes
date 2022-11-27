@@ -7,7 +7,12 @@ export default function HeaderComponent() {
       <h2>
         <span>An NFT Collection of Governance Votes by Barnacle Rodeo</span>
       </h2>
-      <Image src="/images/89.jpg" width="432" height="324" />
+      <Image
+        src="/images/89.jpg"
+        width="432"
+        height="324"
+        alt="Barnacle Rodeo Votes"
+      />
       <div class="subhead">
         <h2>
           <div class="subtitle">
