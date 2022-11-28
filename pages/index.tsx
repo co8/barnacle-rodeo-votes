@@ -3,8 +3,6 @@ import { getBRVotesList } from "../libs/sheets";
 import { Gallery } from "react-grid-gallery";
 import HeaderComponent from "../components/header";
 
-//getEmployee({ id, name }: { id: number;
-
 export default function IndexPage({ votes_api }: { votes_api: object }) {
   return (
     <>
@@ -20,12 +18,12 @@ export default function IndexPage({ votes_api }: { votes_api: object }) {
   );
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps(context: any) {
   const votes_api: object = await getBRVotesList();
   //console.log(votes_api);
   return {
     props: {
-      votes_api: votes_api.slice(1, votes_api.length).reverse(), // remove sheet header + reverse order d
+      votes_api: votes_api.slice(1, votes_api.length.reverse), // remove sheet header + reverse order d
     },
     revalidate: 86400, // In seconds
   };
