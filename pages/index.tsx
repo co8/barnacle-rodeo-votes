@@ -11,8 +11,12 @@ export default function IndexPage({ votes_api }: { votes_api: object }) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="description"
-          content="Barnacle Rodeo Votes: An NFT Collection of Governance Votes by Barnacle Rodeo"
+          content="An NFT Collection of Governance Votes by Barnacle Rodeo"
         />
+        <meta property="og:title" content=">Barnacle Rodeo Votes : NFTs on Stargaze">
+        <meta property="og:description" content="An NFT Collection of Governance Votes by Barnacle Rodeo">
+        <meta property="og:image" content="https://votes.barnacle.rodeo/images/89.jpg">
+        <meta property="og:url" content="https://votes.barnacle.rodeo"></meta>
       </Head>
       <HeaderComponent />
       <div id="media">
