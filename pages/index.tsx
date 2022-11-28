@@ -12,7 +12,7 @@ export default function IndexPage({ votes_api }: { votes_api: object }) {
       </Head>
       <HeaderComponent />
       <div id="media">
-        <Gallery images={votes_api} />
+        <Gallery images={Object.values(votes_api)} />
       </div>
     </>
   );
@@ -23,7 +23,9 @@ export async function getStaticProps(context: any) {
   //console.log(votes_api);
   return {
     props: {
-      votes_api: votes_api.slice(1, votes_api.length.reverse), // remove sheet header + reverse order d
+      votes_api: Object.values(votes_api)
+        .slice(1, Object.values(votes_api).length)
+        .reverse(), // remove sheet header + reverse order d
     },
     revalidate: 86400, // In seconds
   };
