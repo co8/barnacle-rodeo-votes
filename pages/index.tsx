@@ -10,10 +10,6 @@ export default function IndexPage({ votes_api }: { votes_api: object }) {
         <title>Barnacle Rodeo Votes : NFTs on Stargaze</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
-          name="description"
-          content="An NFT Collection of Governance Votes by Barnacle Rodeo"
-        />
-        <meta
           property="og:title"
           content=">Barnacle Rodeo Votes : NFTs on Stargaze"
         />
