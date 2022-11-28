@@ -19,6 +19,7 @@ export default function HeaderComponent() {
           <ReactPlayer
             playing
             loop
+            muted
             width="432px"
             height="324px"
             url="/images/main.mp4"
