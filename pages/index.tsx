@@ -27,6 +27,6 @@ export async function getStaticProps(context: any) {
         .slice(1, Object.values(votes_api).length)
         .reverse(), // remove sheet header + reverse order d
     },
-    revalidate: 30, // In seconds
+    revalidate: 3600, // Every Hour, In seconds
   };
 }
