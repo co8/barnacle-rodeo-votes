@@ -9,6 +9,10 @@ export default function IndexPage({ votes_api }: { votes_api: object }) {
       <Head>
         <title>Barnacle Rodeo Votes : NFTs on Stargaze</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content="Barnacle Rodeo Votes: An NFT Collection of Governance Votes by Barnacle Rodeo"
+        />
       </Head>
       <HeaderComponent />
       <div id="media">
