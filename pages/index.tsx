@@ -3,21 +3,9 @@ import { getBRVotesList } from "../libs/sheets";
 import { Gallery } from "react-grid-gallery";
 import HeaderComponent from "../components/header";
 
-export default function IndexPage({
-  votes_api,
-}: {
-  id: number;
-  vote: string;
-  title: string;
-  motive: string;
-  src: string;
-  width: number;
-  height: number;
-  description: string;
-  caption: string;
-  hash: string;
-  finder: string;
-}) {
+//getEmployee({ id, name }: { id: number;
+
+export default function IndexPage({ votes_api }: { votes_api: object }) {
   return (
     <>
       <Head>
