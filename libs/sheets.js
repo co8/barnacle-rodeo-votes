@@ -8,7 +8,7 @@ export async function getBRVotesList() {
     const sheets = google.sheets({ version: "v4", auth });
 
     const response = await sheets.spreadsheets.values.get({
-      spreadsheetId: process.env.SHEET_ID,
+      spreadsheetId: process.env.SPREADSHEET_ID,
       range: "brvotes", //sheet name
     });
 
@@ -17,17 +17,16 @@ export async function getBRVotesList() {
     if (rows.length) {
       return rows.map((row) => ({
         id: row[0],
-        vote: row[1],
+        vote: row[1] ? row[1] : "",
         alt: "Barnacle Rodeo Votes #" + row[0],
-        title: "Barnacle Rodeo Votes #" + row[0],
+        //title: "Barnacle Rodeo Votes #" + row[0],
+        caption: "Barnacle Rodeo Votes #" + row[4],
         motive: row[2],
         src: "/images/" + row[0] + ".jpg",
-        width: 128,
-        height: 96,
+        width: 240,
+        height: 180,
         description: row[4],
-        caption: row[4],
-        //customOverlay: false,
-        hash: row[5] || "",
+        hash: row[5] ? row[5] : "",
         finder: row[5] ? "https://finder.kujira.app/kaiyo-1/tx/" + row[5] : "",
       }));
     }
