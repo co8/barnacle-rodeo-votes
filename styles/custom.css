@@ -204,6 +204,11 @@ footer #mobile ul {
   display: none;
 }
 
+.preview {
+  width: 432px;
+  margin: auto;
+}
+
 @media only screen and (max-width: 480px) {
   /* .ReactGridGallery .ReactGridGallery_tile-viewport,
   .ReactGridGallery .ReactGridGallery_tile-viewport img {

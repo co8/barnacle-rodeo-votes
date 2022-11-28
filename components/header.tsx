@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ReactPlayer from "react-player/file";
 
 export default function HeaderComponent() {
   return (
@@ -8,12 +9,21 @@ export default function HeaderComponent() {
         <h2>
           <span>An NFT Collection of Governance Votes by Barnacle Rodeo</span>
         </h2>
-        <Image
+        {/* <Image
           src="/images/89.jpg"
           width="432"
           height="324"
           alt="Barnacle Rodeo Votes"
-        />
+        /> */}
+        <div className="preview">
+          <ReactPlayer
+            playing
+            loop
+            width="432px"
+            height="324px"
+            url="/images/main.mp4"
+          />
+        </div>
         <div className="subhead">
           <h2>
             <div className="subtitle">
