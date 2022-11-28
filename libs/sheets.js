@@ -16,7 +16,6 @@ export async function getBRVotesList() {
     });
 
     const rows = response.data.values;
-
     if (rows.length) {
       return rows.map((row) => ({
         id: row[0],
