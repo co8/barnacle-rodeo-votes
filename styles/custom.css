@@ -15,9 +15,9 @@ body {
   text-shadow: rgba(0, 0, 0, 0.4) 3px 3px 3px;
 }
 
-.header a {
+/* .header a {
   border-bottom: 1px dotted #fff;
-}
+} */
 
 .header h1 {
   font-size: 4rem;
@@ -68,6 +68,21 @@ h2 {
 .subhead .subtitle div {
   padding-top: 1rem;
 }
+
+/* .stargaze_link {
+  font-size: 3rem;
+  text-shadow: none;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    77deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 31%,
+    rgba(253, 45, 75, 1) 61%,
+    rgba(45, 96, 253, 1) 86%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
 
 #media img {
   width: 240px;

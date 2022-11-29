@@ -46,8 +46,8 @@ export default function HeaderComponent() {
               @BarnacleRodeo
             </a>
             <br/> */}
-            <a href="#" target="_new">
-              Grab Your Vote on Stargaze
+            <a className="stargaze_link" href="#" target="_new">
+              BUY ON STARGAZE
             </a>
           </h2>
         </div>
