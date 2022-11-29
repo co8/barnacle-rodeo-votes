@@ -41,8 +41,11 @@ export default function HeaderComponent() {
             </div>
             <a href="https://twitter.com/BarnacleRodeo" target="_new">
               @BarnacleRodeo
-            </a>{" "}
-            |{" "}
+            </a>
+            <span className="desktop"> | </span>
+            <span className="mobile">
+              <br />
+            </span>
             <a href="#" target="_new">
               Grab Your Vote on Stargaze
             </a>
