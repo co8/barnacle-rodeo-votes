@@ -74,13 +74,13 @@ h2 {
   border: 2px solid #fff;
   padding: 0.4rem;
   box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 3px;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .stargaze_link:hover {
   box-shadow: none;
   text-shadow: none;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 #media img {
