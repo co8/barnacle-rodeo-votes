@@ -47,7 +47,7 @@ export default function HeaderComponent() {
             </a>
             <br/> */}
             <a className="stargaze_link" href="#" target="_new">
-              BUY ON STARGAZE
+              NOW ON STARGAZE
             </a>
           </h2>
         </div>
