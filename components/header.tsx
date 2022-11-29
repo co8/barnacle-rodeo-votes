@@ -36,8 +36,11 @@ export default function HeaderComponent() {
           <h2>
             <div className="subtitle">
               Barnacle Rodeo is a genesis Kujira validator and we&apos;re
-              celebrating our governance votes and voting record! Bonus Artwork
-              Celebrating our Milestones have Replaced Failed Proposal Deposits
+              celebrating our governance votes and voting record!
+              <div>
+                Bonus Artwork Celebrating our Milestones have Replaced Failed
+                Proposal Deposits
+              </div>
             </div>
             <a href="https://twitter.com/BarnacleRodeo" target="_new">
               @BarnacleRodeo

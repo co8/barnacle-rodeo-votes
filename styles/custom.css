@@ -65,6 +65,10 @@ h2 {
   padding: 1rem 0 1rem 0;
 }
 
+.subhead .subtitle div {
+  padding-top: 1rem;
+}
+
 #media img {
   width: 240px;
   height: 180px;
@@ -243,7 +247,8 @@ footer #mobile ul {
   .header h2 {
     font-size: 1rem;
   }
-  .header .subtitle {
+  .header .subtitle,
+  .header .subtitle div {
     font-size: 1rem;
   }
   .preview {
