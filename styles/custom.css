@@ -233,4 +233,12 @@ footer #mobile ul {
   .header .subtitle {
     font-size: 1rem;
   }
+  .preview {
+    width: 216px;
+    margin: auto;
+  }
+  .preview div {
+    width: 216px !important;
+    height: 162px !important;
+  }
 }
