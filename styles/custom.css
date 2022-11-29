@@ -209,6 +209,7 @@ footer #mobile ul {
   margin: auto;
 }
 
+/* mobile */
 @media only screen and (max-width: 480px) {
   /* .ReactGridGallery .ReactGridGallery_tile-viewport,
   .ReactGridGallery .ReactGridGallery_tile-viewport img {
@@ -219,4 +220,17 @@ footer #mobile ul {
   /* #media {
     padding: 1rem 0.5rem 0 0.5rem;
   } */
+}
+
+/* small desktop & tablet */
+@media only screen and (max-width: 888px) {
+  .header h1 {
+    font-size: 1.5rem;
+  }
+  .header h2 {
+    font-size: 1rem;
+  }
+  .header .subtitle {
+    font-size: 1rem;
+  }
 }
