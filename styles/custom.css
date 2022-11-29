@@ -209,10 +209,23 @@ footer #mobile ul {
   margin: auto;
 }
 
+.header .desktop {
+  display: block;
+}
+.header .mobile {
+  display: none;
+}
+
 /* mobile */
 @media only screen and (max-width: 480px) {
   .header h2 span {
     margin: 0 1.5rem 2rem 1.5rem;
+  }
+  .header .desktop {
+    display: none;
+  }
+  .header .mobile {
+    display: block;
   }
 }
 

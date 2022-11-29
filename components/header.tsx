@@ -7,7 +7,14 @@ export default function HeaderComponent() {
       <div className="header">
         <h1>Barnacle Rodeo Votes</h1>
         <h2>
-          <span>An NFT Collection of Governance Votes by Barnacle Rodeo</span>
+          <span className="desktop">
+            An NFT Collection of Governance Votes by Barnacle Rodeo
+          </span>
+          <span className="mobile">
+            An NFT Collection of Governance Votes
+            <br />
+            by Barnacle Rodeo
+          </span>
         </h2>
         {/* <Image
           src="/images/89.jpg"
