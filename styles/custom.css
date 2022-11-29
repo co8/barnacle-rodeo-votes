@@ -227,6 +227,9 @@ footer #mobile ul {
   .header .mobile {
     display: block;
   }
+  .header h2 span.mobile {
+    margin: 0;
+  }
 }
 
 /* small desktop & tablet */
