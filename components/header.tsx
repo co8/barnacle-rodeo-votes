@@ -42,13 +42,10 @@ export default function HeaderComponent() {
                 Proposal Deposits
               </div>
             </div>
-            <a href="https://twitter.com/BarnacleRodeo" target="_new">
+            {/* <a href="https://twitter.com/BarnacleRodeo" target="_new">
               @BarnacleRodeo
             </a>
-            <span className="desktop"> | </span>
-            <span className="mobile">
-              <br />
-            </span>
+            <br/> */}
             <a href="#" target="_new">
               Grab Your Vote on Stargaze
             </a>
