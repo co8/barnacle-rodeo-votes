@@ -234,11 +234,13 @@ footer #mobile ul {
     font-size: 1rem;
   }
   .preview {
-    width: 216px;
+    width: 288px;
     margin: auto;
   }
+  .ReactGridGallery_tile-viewport,
+  .ReactGridGallery_tile-viewport img,
   .preview div {
-    width: 216px !important;
-    height: 162px !important;
+    width: 288px !important;
+    height: 216px !important;
   }
 }
