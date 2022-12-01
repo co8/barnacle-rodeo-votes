@@ -31,25 +31,14 @@ export default function IndexPage({ votes_api }: { votes_api: object }) {
   );
 }
 
-// export async function getStaticProps() {
-//   const votes_api: object = await getBRVotesList();
-//   //console.log(votes_api);
-//   return {
-//     props: {
-//       votes_api: Object.values(votes_api)
-//         .slice(1, Object.values(votes_api).length)
-//         .reverse(), // remove sheet header + reverse order
-//     },
-//     revalidate: 3600, // Every Hour, In seconds
-//   };
-// }
-
 export async function getStaticProps() {
   const votes_api: object = await getBRVotesList();
   //console.log(votes_api);
   return {
     props: {
-      votes_api: votes_api.slice(1).reverse(), // remove sheet header + reverse order
+      votes_api: Object.values(votes_api)
+        .slice(1, Object.values(votes_api).length)
+        .reverse(), // remove sheet header + reverse order
     },
     revalidate: 3600, // Every Hour, In seconds
   };
