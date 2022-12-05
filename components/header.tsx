@@ -1,7 +1,9 @@
 import Image from "next/image";
 import ReactPlayer from "react-player/file";
+import dynamic from "next/dynamic";
 
 export default function HeaderComponent() {
+  const ReactPlayer = dynamic(() => import("react-player"), { ssr: true });
   return (
     <>
       <div className="header">
