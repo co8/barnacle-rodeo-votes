@@ -3,6 +3,7 @@ import ReactPlayer from "react-player/file";
 import dynamic from "next/dynamic";
 
 export default function HeaderComponent() {
+  //ReactPlayer hydration error fix
   const ReactPlayer = dynamic(() => import("react-player"), { ssr: true });
   return (
     <>
@@ -37,11 +38,13 @@ export default function HeaderComponent() {
         <div className="subhead">
           <h2>
             <div className="subtitle">
-              Barnacle Rodeo is a genesis Kujira validator and we&apos;re
-              celebrating our governance votes and voting record!
+              We Are Barnacle Rodeo, a Genesis Kujira Validator, and We Are
+              Excited to Present Our First 100 Governance Votes! To Celebrate
+              This Milestone, We Have Included Bonus Artwork in Place of
+              Non-Voting Proposals.
               <div>
-                Bonus Artwork Celebrating our Milestones have Replaced Failed
-                Proposal Deposits
+                Join Us in Celebrating Our Voting Record and the Power of
+                Governance in Action!
               </div>
             </div>
             {/* <a href="https://twitter.com/BarnacleRodeo" target="_new">
