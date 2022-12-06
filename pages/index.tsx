@@ -36,9 +36,7 @@ export async function getStaticProps() {
   //console.log(votes_api);
   return {
     props: {
-      votes_api: Object.values(votes_api)
-        .slice(1, Object.values(votes_api).length)
-        .reverse(), // remove sheet header + reverse order
+      votes_api: Object.values(votes_api).slice(1), // remove sheet header
     },
     revalidate: 3600, // Every Hour, In seconds
   };
