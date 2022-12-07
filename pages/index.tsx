@@ -38,6 +38,6 @@ export async function getStaticProps() {
     props: {
       votes_api: Object.values(votes_api).slice(1), // remove sheet header
     },
-    revalidate: 31536000, // Every Hour, In seconds 3600 // 1 Year: 31536000
+    revalidate: 31536000, // In seconds = Every Hour: 3600 ; 1 Year: 31536000
   };
 }
