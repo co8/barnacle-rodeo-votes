@@ -9,7 +9,7 @@ body {
 }
 
 .ril-outer {
-  background-color: #0093e9;
+  background-color: #5a08bf;
   background: linear-gradient(160deg, #0093e9 1%, #5a08bf 99%);
 }
 
@@ -23,6 +23,7 @@ body {
 .header h1 {
   font-size: 4rem;
   margin: 1rem 0 0 0;
+  /* font-weight: 400; */
 }
 
 .subhead h2 span {
@@ -234,7 +235,8 @@ img.ril-image-current {
 }
 
 .ril-toolbar__item__child {
-  font-family: "__Montserrat_bebcff", "__Montserrat_bebcff_fallback";
+  font-family: "--montserrat-font", "--montserrat-font_fallback";
+  /* font-family: "__Montserrat_bebcff", "__Montserrat_bebcff_fallback"; */
   font-style: normal;
   font-weight: 400;
   font-size: 0.8rem;
@@ -312,6 +314,7 @@ img.ril-image-current {
   }
   .header h1 {
     font-size: 1.5rem;
+    font-weight: 400;
   }
   .header h2 {
     font-size: 1rem;

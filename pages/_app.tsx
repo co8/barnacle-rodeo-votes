@@ -5,8 +5,9 @@ import { Montserrat } from "@next/font/google";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: "300",
-  //weight: ["100", "400"],
+  //weight: "200",
+  variable: "--montserrat-font",
+  weight: ["100", "400"],
 });
 
 export default function App({ Component, pageProps }: AppProps) {
