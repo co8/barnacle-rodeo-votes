@@ -173,7 +173,7 @@ footer #mobile ul {
 }
 
 .footer-stargaze {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 @media only screen and (max-width: 480px) {
@@ -314,7 +314,6 @@ img.ril-image-current {
   }
   .header h1 {
     font-size: 1.5rem;
-    font-weight: 400;
   }
   .header h2 {
     font-size: 1rem;
