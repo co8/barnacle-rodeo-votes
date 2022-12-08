@@ -6,6 +6,7 @@ body {
   border-top: none;
   background-color: #0093e9;
   background: linear-gradient(160deg, #0093e9 1%, #62918b 50%, #5a08bf 99%);
+  font-family: var(--montserrat-font);
 }
 
 .ril-outer {
@@ -235,10 +236,9 @@ img.ril-image-current {
 }
 
 .ril-toolbar__item__child {
-  /* font-family: "--montserrat-font", "--montserrat-font_fallback"; */
-  font-family: "__Montserrat_c9072c", "__Montserrat_c9072c_fallback";
+  /* font-family: var(--montserrat-font); */
+  font-family: "__Montserrat_c230de", "__Montserrat_c230de_fallback";
   font-style: normal;
-  /* font-weight: 400; */
   font-size: 0.8rem;
 }
 
