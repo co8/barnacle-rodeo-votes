@@ -235,10 +235,10 @@ img.ril-image-current {
 }
 
 .ril-toolbar__item__child {
-  font-family: "--montserrat-font", "--montserrat-font_fallback";
-  /* font-family: "__Montserrat_bebcff", "__Montserrat_bebcff_fallback"; */
+  /* font-family: "--montserrat-font", "--montserrat-font_fallback"; */
+  font-family: "__Montserrat_c9072c", "__Montserrat_c9072c_fallback";
   font-style: normal;
-  font-weight: 400;
+  /* font-weight: 400; */
   font-size: 0.8rem;
 }
 
