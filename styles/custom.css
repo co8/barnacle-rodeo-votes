@@ -2,11 +2,15 @@ html {
   scroll-behavior: smooth;
 }
 
-body,
-.ril-outer {
+body {
   border-top: none;
   background-color: #0093e9;
   background: linear-gradient(160deg, #0093e9 1%, #62918b 50%, #5a08bf 99%);
+}
+
+.ril-outer {
+  background-color: #0093e9;
+  background: linear-gradient(160deg, #0093e9 1%, #5a08bf 99%);
 }
 
 .header,

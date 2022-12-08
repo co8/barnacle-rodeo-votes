@@ -24,6 +24,7 @@ export async function getBRVotesList() {
         //title: "Barnacle Rodeo Votes #" + row[0],
         caption: "Barnacle Rodeo Votes #" + row[4],
         motive: row[2],
+        //src: "/images/" + row[0] + ".jpg",
         src: "/images/" + row[0] + ".jpg",
         width: 240,
         height: 180,
