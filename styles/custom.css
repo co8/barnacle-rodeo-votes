@@ -70,18 +70,16 @@ h2 {
   padding-top: 1rem;
 }
 
-.stargaze_link {
-  border-radius: 0.5rem;
-  border: 2px solid #fff;
-  padding: 0.4rem;
-  box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 3px;
-  background: rgba(0, 0, 0, 0.1);
+.header img.stargaze_link {
+  border-radius: 0;
+  box-shadow: none !important;
+  max-width: 300px;
+  width: 100%;
+  height: auto;
 }
 
 .stargaze_link:hover {
-  box-shadow: none;
-  text-shadow: none;
-  background-color: rgba(0, 0, 0, 0.2);
+  text-shadow: rgba(0, 0, 0, 0.5) 3px 3px 3px;
 }
 
 #media img {
@@ -113,7 +111,7 @@ footer {
   font-style: normal;
   /* width: 80%; */
   text-align: center;
-  margin-top: -30px;
+  margin-top: -25px; /* -30px */
   padding: 3% 8% 0 5%;
   /* border: 1px dotted #fff */
 }
@@ -146,6 +144,34 @@ footer #desktop ul li.br img {
 
 footer #mobile ul {
   display: inline-grid;
+}
+
+.footer-barnacle-image {
+  margin-bottom: -4px;
+}
+
+.flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+  flex-direction: row;
+}
+
+.flex-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 0.5rem;
+}
+
+.footer-barnacle {
+  position: relative;
+  bottom: -4px;
+}
+
+.footer-stargaze {
+  margin-top: 1rem;
 }
 
 @media only screen and (max-width: 480px) {
@@ -191,7 +217,7 @@ footer #mobile ul {
 /********************************/
 
 #media {
-  padding: 2rem 3rem 0 3rem;
+  padding: 0 3rem 0 3rem;
 }
 
 .ReactGridGallery .ReactGridGallery_tile-viewport,

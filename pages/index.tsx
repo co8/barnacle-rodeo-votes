@@ -1,11 +1,12 @@
 import { useState } from "react";
 import Head from "next/head";
+//import Image from "next/image";
 import { getBRVotesList } from "../libs/sheets";
 import { Image, Gallery } from "react-grid-gallery";
-//import { Gallery } from "react-grid-gallery";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
 import HeaderComponent from "../components/header";
+import FooterComponent from "../components/footer";
 
 export interface CustomImage extends Image {
   original: string;
@@ -21,7 +22,6 @@ export default function IndexPage({ votes_api }: { votes_api: object }) {
   const prevIndex = (index + images.length - 1) % images.length;
   const prevImage = images[prevIndex] || currentImage;
 
-  //TODO fix handleClick - current image to modal
   const handleClick = (index: number, item: CustomImage) => setIndex(index);
   const handleClose = () => setIndex(-1);
   const handleMovePrev = () => setIndex(prevIndex);
@@ -38,13 +38,13 @@ export default function IndexPage({ votes_api }: { votes_api: object }) {
         />
         <meta
           property="og:description"
-          content="An NFT Collection of Governance Votes by Barnacle Rodeo"
+          content="Barnacle Rodeo Kujira Validator First 100 Governance Votes!"
         />
         <meta
           property="og:image"
           content="https://votes.barnacle.rodeo/images/89.jpg"
         />
-        <meta property="og:url" content="https://votes.barnacle.rodeo" />
+        <meta property="og:url" content="https://barnacle.rodeo/votes" />
       </Head>
       <HeaderComponent />
       <div id="media">
@@ -59,17 +59,15 @@ export default function IndexPage({ votes_api }: { votes_api: object }) {
             enableZoom={false}
             mainSrc={currentImage.src}
             imageTitle={currentImage.caption}
-            //mainSrcThumbnail={currentImage.src}
             nextSrc={nextImage.src}
-            //nextSrcThumbnail={nextImage.src}
             prevSrc={prevImage.src}
-            //prevSrcThumbnail={prevImage.src}
             onCloseRequest={handleClose}
             onMovePrevRequest={handleMovePrev}
             onMoveNextRequest={handleMoveNext}
           />
         )}
       </div>
+      <FooterComponent />
     </>
   );
 }

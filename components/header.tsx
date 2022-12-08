@@ -19,12 +19,6 @@ export default function HeaderComponent() {
             by Barnacle Rodeo
           </span>
         </h2>
-        {/* <Image
-          src="/images/89.jpg"
-          width="432"
-          height="324"
-          alt="Barnacle Rodeo Votes"
-        /> */}
         <div className="preview">
           <ReactPlayer
             playing
@@ -47,12 +41,18 @@ export default function HeaderComponent() {
                 Governance in Action!
               </div>
             </div>
-            {/* <a href="https://twitter.com/BarnacleRodeo" target="_new">
-              @BarnacleRodeo
-            </a>
-            <br/> */}
-            <a className="stargaze_link" href="#" target="_new">
-              NOW ON STARGAZE
+            <a
+              href="https://app.stargaze.zone/marketplace"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Image
+                className="stargaze_link"
+                src="/static/stargaze.png"
+                width="600"
+                height="167"
+                alt="Get Your Votes on Stargaze"
+              />
             </a>
           </h2>
         </div>
