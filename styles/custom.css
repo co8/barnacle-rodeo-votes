@@ -75,7 +75,7 @@ h2 {
 .header img.stargaze_link {
   border-radius: 0;
   box-shadow: none !important;
-  max-width: 600px;
+  max-width: 400px;
   width: 100%;
   height: auto;
 }
