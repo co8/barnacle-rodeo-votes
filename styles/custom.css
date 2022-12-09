@@ -75,7 +75,7 @@ h2 {
 .header img.stargaze_link {
   border-radius: 0;
   box-shadow: none !important;
-  max-width: 300px;
+  max-width: 600px;
   width: 100%;
   height: auto;
 }
@@ -172,9 +172,9 @@ footer #mobile ul {
   bottom: -4px;
 }
 
-.footer-stargaze {
+/* .footer-stargaze {
   margin-top: 0.5rem;
-}
+} */
 
 @media only screen and (max-width: 480px) {
   #media img {
