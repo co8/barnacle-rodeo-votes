@@ -48,9 +48,9 @@ export default function HeaderComponent() {
             >
               <Image
                 className="stargaze_link"
-                src="/static/stargaze-header.png"
-                width="5001"
-                height="87"
+                src="/static/stargaze.png"
+                width="600"
+                height="167"
                 alt="Get Your Votes on Stargaze"
               />
             </a>
