@@ -30,6 +30,7 @@ export async function getBRVotesList() {
         height: 180,
         description: row[4],
         hash: row[5] ? row[5] : "",
+        //title: row[5] ? row[5] : "",
         finder: row[5] ? "https://finder.kujira.app/kaiyo-1/tx/" + row[5] : "",
       }));
     }

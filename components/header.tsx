@@ -32,10 +32,16 @@ export default function HeaderComponent() {
         <div className="subhead">
           <h2>
             <div className="subtitle">
-              We Are Barnacle Rodeo, a Genesis Kujira Validator, and We Are
+              We Are Barnacle Rodeo, a Genesis 🉐 Kujira Validator, and We Are
               Excited to Present Our First 100 Governance Votes! To Celebrate
               This Milestone, We Have Included Bonus Artwork in Place of
               Non-Voting Proposals.
+              <div>
+                <em>
+                  Metadata Includes Motive, Transaction Hash and Link to 🉐
+                  Kujira Finder.
+                </em>
+              </div>
               <div>
                 Join Us in Celebrating Our Voting Record and the Power of
                 Governance in Action!
