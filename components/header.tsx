@@ -48,7 +48,7 @@ export default function HeaderComponent() {
               </div>
             </div>
             <a
-              href="https://app.stargaze.zone/marketplace"
+              href="https://app.stargaze.zone/marketplace/stars1ax3afmw0kl8yvknrxml9glcfffpakdjxz678t58k3kzc2qcc272qxm4hpp"
               target="_blank"
               rel="noreferrer"
             >
