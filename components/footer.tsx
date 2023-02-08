@@ -25,8 +25,8 @@ export default function FooterComponent() {
               <Image
                 className="footer-barnacle"
                 src="/static/barnacle-rodeo-footer.png"
-                width="304"
-                height="208"
+                width="416"
+                height="285"
                 alt="Barnacle Rodeo 🉐 Kujira Validator"
               />
             </a>
