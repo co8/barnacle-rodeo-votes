@@ -27,6 +27,7 @@ export default function HeaderComponent() {
             width="432px"
             height="324px"
             url="/images/main.mp4"
+            //poster="/images/89.jpg"
           />
         </div>
         <div className="subhead">
