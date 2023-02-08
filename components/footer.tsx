@@ -31,6 +31,22 @@ export default function FooterComponent() {
               />
             </a>
           </div>
+
+          <div className="flex-container">
+            <a
+              href="https://blue.kujira.app/stake/kujiravaloper1tn29ajxxcgpx24ndjs5rtccy4wnuj9kqzap9gt"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Image
+                className="footer-barnacle-stake"
+                src="/static/barnacle-rodeo-kujira-stake-now.png"
+                width="320"
+                height="230"
+                alt="Stake with Barnacle Rodeo on Kujira 🉐"
+              />
+            </a>
+          </div>
         </div>
       </footer>
     </>
