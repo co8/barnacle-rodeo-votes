@@ -42,7 +42,8 @@ export async function getBRVotesList() {
     //console.log("after " + rows101.length);
 
     //combine arrays
-    const rows_merged = rows.concat(rows101);
+    //const rows_merged = rows.concat(rows101);
+    const rows_merged = rows;
 
     //if (rows.length) {
     if (rows_merged.length) {
