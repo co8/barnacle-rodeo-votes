@@ -10,29 +10,69 @@ export async function getBRVotesList() {
     );
 
     const sheets = google.sheets({ version: "v4", auth: jwt });
+    //votes 1-100
     const response = await sheets.spreadsheets.values.get({
       spreadsheetId: process.env.SPREADSHEET_ID,
       range: process.env.SPREADSHEET_NAME,
     });
-
     const rows = response.data.values;
-    if (rows.length) {
-      return rows.map((row) => ({
+    //console.log(rows);
+
+    //votes 101+
+    const response101 = await sheets.spreadsheets.values.get({
+      spreadsheetId: process.env.SPREADSHEET_ID,
+      range: "votes101",
+    });
+    const rows101 = response101.data.values;
+    //remove empty failed proposals without hash
+    //console.log("before " + rows101.length);
+    if (rows101.length) {
+      for (var i = 0; i < rows101.length; i++) {
+        const row101 = rows101[i];
+        //remove row if no hash value in row101[6]
+        //console.log(row101);
+        if (row101.length < 3 || row101[6] == undefined) {
+          //rows101.splice(i, 1);
+          //console.log("***spliced ID " + row101[0]);
+        }
+      }
+      //reverse sort rows101
+      rows101.reverse();
+    }
+    //console.log("after " + rows101.length);
+
+    //combine arrays
+    const rows_merged = rows.concat(rows101);
+
+    //if (rows.length) {
+    if (rows_merged.length) {
+      //return rows.map((row) => ({
+      //return rows_merged.map((row) => ({
+      const result = rows_merged.map((row) => ({
         id: row[0],
         vote: row[1] ? row[1] : "",
         alt: "Barnacle Rodeo Votes #" + row[0],
         //title: "Barnacle Rodeo Votes #" + row[0],
         caption: "Barnacle Rodeo Votes #" + row[4],
-        motive: row[2],
-        //src: "/images/" + row[0] + ".jpg",
+        motive: row[2] ? row[2] : "",
         src: "/images/" + row[0] + ".jpg",
         width: 240,
         height: 180,
-        description: row[4],
-        hash: row[5] ? row[5] : "",
+        description: row[4] ? row[4] : "",
+        block: row[5] ? row[5] : "",
+        hash: row[6] ? row[6] : "",
         //title: row[5] ? row[5] : "",
-        finder: row[5] ? "https://finder.kujira.app/kaiyo-1/tx/" + row[5] : "",
+        finder: row[6] ? "https://finder.kujira.app/kaiyo-1/tx/" + row[6] : "",
       }));
+
+      //replace missing image with placeholder
+      const placeholder = "/images/voteholder.jpg";
+      //check file exists
+      //const file = row[src];
+
+      //console.log(result[284]);
+      //console.log("result " + result.length);
+      return result;
     }
   } catch (err) {
     console.log(err);

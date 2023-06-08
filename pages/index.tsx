@@ -75,11 +75,10 @@ export default function IndexPage({ votes_api }: { votes_api: object }) {
 
 export async function getStaticProps() {
   const votes_api: object = await getBRVotesList();
-  //console.log(votes_api);
   return {
     props: {
       votes_api: Object.values(votes_api).slice(1), // remove sheet header
     },
-    revalidate: 60, // In seconds = Every Hour: 3600 ; 1 Year: 31536000
+    revalidate: 3600, // In seconds = Every Hour: 3600 ; 1 Year: 31536000
   };
 }

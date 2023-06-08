@@ -223,6 +223,11 @@ footer #mobile ul {
   padding: 0 3rem 0 3rem;
 }
 
+.ReactGridGallery .ReactGridGallery_tile-viewport {
+  background-image: url("/static/voteholder.jpg");
+  background-size: contain;
+}
+
 .ReactGridGallery .ReactGridGallery_tile-viewport,
 .ril-inner img {
   border-radius: 8px;

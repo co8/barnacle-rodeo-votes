@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 import "../styles/custom.css";
 import type { AppProps } from "next/app";
-import { Montserrat } from "@next/font/google";
+import { Montserrat } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 
 const montserrat = Montserrat({
