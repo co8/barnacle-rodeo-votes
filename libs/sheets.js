@@ -41,6 +41,7 @@ export async function getBRVotesList() {
     }
     //console.log("after " + rows101.length);
 
+    //TODO - removed merge of rows 101 + 101+
     //combine arrays
     //const rows_merged = rows.concat(rows101);
     const rows_merged = rows;
