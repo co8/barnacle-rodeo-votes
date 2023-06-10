@@ -1,10 +1,10 @@
-const puppeteer = require("puppeteer");
-
-const target_kujira_data = process.env.target_kujira_data;
-const target_validator_data = process.env.target_validator_data;
-const validator_address = process.env.validator_address;
-
 export async function getKujiraData() {
+  const puppeteer = require("puppeteer");
+
+  const target_kujira_data = process.env.target_kujira_data;
+  const target_validator_data = process.env.target_validator_data;
+  const validator_address = process.env.validator_address;
+
   (async () => {
     //initiate the browser
     const browser = await puppeteer.launch({
@@ -71,14 +71,15 @@ export async function getKujiraData() {
     //merge objects for output
     const obj_output = Object.assign({}, obj_kuji, obj_validator);
 
-    console.log(obj_output);
-
     //save array to database
 
     //send values to edge
 
     //close headless chrome
     await browser.close();
+
+    //console.log(obj_output);
+    return obj_output;
   })(); //async ()
 }
 

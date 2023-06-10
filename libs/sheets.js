@@ -1,4 +1,5 @@
 import { google } from "googleapis";
+
 export async function getBRVotesList() {
   try {
     const target = ["https://www.googleapis.com/auth/spreadsheets.readonly"];
