@@ -1,0 +1,8 @@
+// {
+//     "crons": [
+//         {
+//             "path": "/libs/collector",
+//             "schedule": "*/20 * * * *"
+//         }
+//     ]
+// }
