@@ -8,7 +8,7 @@ export default async function handler(
 ) {
   const client = await db.connect();
 
-  const data_obj = collector();
+  //const data_obj = collector();
   /** {
   kuji_usd: '0.886',
   kuji_total_supply: '116.97M',
