@@ -111,9 +111,8 @@ const validator_address =
   //merge objects for output
   const obj_output = Object.assign({}, obj_kuji, obj_validator, obj_chain);
 
+  //console.log(typeof obj_output);
   console.log(obj_output);
-
-  //save array to database
 
   //send values to edge
 
