@@ -1,14 +1,12 @@
-import { db } from "@vercel/postgres";
+//import { db } from "@vercel/postgres";
+import { createClient } from "@vercel/postgres";
 import { NextApiRequest, NextApiResponse } from "next";
 
 export default async function handler(
   request: NextApiRequest,
   response: NextApiResponse
 ) {
-  const client = await db.connect();
-
-  const table = "statistics";
-
+  //static data
   const data = {
     kuji_usd: "0.884",
     kuji_total_supply: "116.97M",
@@ -27,19 +25,39 @@ export default async function handler(
     chain_nakamoto_index: "11",
   };
 
-  try {
-    //create table Statistics if not exists
-    //await client.sql`CREATE TABLE IF NOT EXISTS ${table} (created timestamp, kuji_usd varchar(255), kuji_total_supply varchar(255), kuji_staked varchar(255), kuji_liquid_supply varchar(255), kuji_inflation varchar(255), usk_usd varchar(255), usk_total_supply varchar(255), block_height varchar(255), block_rate_seconds varchar(255), val_delegated_kuji varchar(255), val_voting_power varchar(255), val_commission varchar(255), chain_unbonding_time varchar(255), chain_gini_coefficient varchar(255), chain_nakamoto_index varchar(255));`;
+  //init populate table
+  const table = "statistics";
+  const keys = Object.keys(data);
+  const key_list = keys.join(", ");
+  const key_list_create = keys.join(" varchar(255), ");
+  const values = Object.values(data);
+  const val_list = values.join("', '");
 
-    //init populate table
-    const keys = Object.keys(data);
-    const key_list = keys.join(", ");
-    const values = Object.values(data);
-    const val_list = values.join("', '");
-    await client.sql`INSERT INTO ${table}(created, ${key_list}) VALUES (NOW(), '${val_list}');`;
-    //const insertSql = `INSERT INTO ${table}(created, ${key_list}) VALUES (NOW(), '${val_list}');`;
-    //console.log(insertSql);
+  //const client = await db.connect(); //hangs up
+  const client = createClient();
+  await client.connect();
+  console.log(`client connect`);
+
+  try {
+    console.log(`drop table`);
+    await client.sql`DROP TABLE IF EXISTS ${table}`; //${table} //statistics
+    console.log(`drop table complete`);
+
+    console.log(`create table`);
+    //create table Statistics if not exists
+    await client.sql`CREATE TABLE IF NOT EXISTS ${table} (created timestamp, kuji_usd varchar(255), kuji_total_supply varchar(255), kuji_staked varchar(255), kuji_liquid_supply varchar(255), kuji_inflation varchar(255), usk_usd varchar(255), usk_total_supply varchar(255), block_height varchar(255), block_rate_seconds varchar(255), val_delegated_kuji varchar(255), val_voting_power varchar(255), val_commission varchar(255), chain_unbonding_time varchar(255), chain_gini_coefficient varchar(255), chain_nakamoto_index varchar(255));`;
+    //const createSql = `CREATE TABLE IF NOT EXISTS statistics (created timestamp, ${key_list_create} varchar(255));`;
+    //console.log(createSql);
+    //await client.sql`${createSql}`;
+    //await client.sql`CREATE TABLE IF NOT EXISTS ${table} (created timestamp, ${key_list_create} varchar(255));`;
+    console.log(`create table complete`);
+
+    console.log(`insert table`);
+    // await client.sql`INSERT INTO '${table}' (created, ${key_list}) VALUES (NOW(), '${val_list}');`;
+    const insertSql = `INSERT INTO ${table} (created, ${key_list}) VALUES (NOW(), '${val_list}');`;
+    console.log(insertSql);
     //await client.sql`${insertSql}`;
+    console.log(`insert table complete`);
   } catch (error) {
     return response.status(500).json({ error });
   }
